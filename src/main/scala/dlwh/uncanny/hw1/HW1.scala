@@ -23,13 +23,15 @@ object HW1 extends App {
   // read data:
   val negative = for {
     file <- new File(path,"neg").listFiles
-    toks = Source.fromFile(file).mkString.split(" ") // data's already tokenized!
+    toks = Source.fromFile(file).mkString.split("\\s") // data's already tokenized!
   } yield Example(0,toks.toIndexedSeq,file.getName)
 
   val positive = for {
     file <- new File(path,"pos").listFiles
-    toks = Source.fromFile(file).mkString.split(" ") // data's already tokenized!
+    toks = Source.fromFile(file).mkString.split("\\s") // data's already tokenized!
   } yield Example(1,toks.toIndexedSeq,file.getName)
+
+  println(positive(0),negative(0))
 
   val all = positive ++ negative
   val asCounts:IndexedSeq[Example[Int,Counter[String,Double]]] = for(ex <- all) yield ex.map(Counter.count(_:_*) * 1.0)
