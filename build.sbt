@@ -1,3 +1,4 @@
+import AssemblyKeys._ 
 name := "uncanny"
 
 version := "1.0"
@@ -40,3 +41,5 @@ scalacOptions ++= Seq("-no-specialization","-deprecation","-target:jvm-1.5")
 javaOptions += "-Xmx2g"
 
 
+
+seq(assemblySettings: _*)
