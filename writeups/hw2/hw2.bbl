@@ -1,0 +1,44 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Andrew and Gao(2007)]{Andrew07scalabletraining}
+Galen Andrew and Jianfeng Gao.
+\newblock Scalable training of l1-regularized log-linear models.
+\newblock In \emph{In ICML ’07}, 2007.
+
+\bibitem[Blitzer et~al.(2007)Blitzer, Dredze, and
+  Pereira]{Blitzer07Biographies}
+John Blitzer, Mark Dredze, and Fernando Pereira.
+\newblock Biographies, bollywood, boom-boxes and blenders: Domain adaptation
+  for sentiment classification.
+\newblock In \emph{Association for Computational Linguistics}, Prague, Czech
+  Republic, 2007.
+
+\bibitem[Duchi et~al.(2010)Duchi, Hazan, and Singer]{duchi10adaptive}
+John Duchi, Elad Hazan, and Yoram Singer.
+\newblock {Adaptive Subgradient Methods for Online Learning and Stochastic
+  Optimization}.
+\newblock \emph{COLT 2010: Proceedings of the 23st annual workshop on
+  Computational learning theory}, 2010.
+\newblock URL \url{http://www.colt2010.org/papers/023Duchi.pdf}.
+
+\bibitem[Liu et~al.(1989)Liu, Nocedal, Liu, and Nocedal]{lbfgs}
+Dong~C. Liu, Jorge Nocedal, Dong~C. Liu, and Jorge Nocedal.
+\newblock On the limited memory bfgs method for large scale optimization.
+\newblock \emph{Mathematical Programming}, 45:\penalty0 503--528, 1989.
+
+\bibitem[Prokopec et~al.(2011)Prokopec, Bagwell, Rompf, and
+  Odersky]{prokopec2011Generic}
+Aleksandar Prokopec, Phil Bagwell, Tiark Rompf, and Martin Odersky.
+\newblock A generic parallel collection framework.
+\newblock In \emph{Proceedings of the 17th international conference on Parallel
+  processing - Volume Part II}, Euro-Par'11, pages 136--147, Berlin,
+  Heidelberg, 2011. Springer-Verlag.
+\newblock ISBN 978-3-642-23396-8.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=2033408.2033425}.
+
+\end{thebibliography}
