@@ -15,6 +15,9 @@ import scalala.tensor.dense.DenseVector
 import scalanlp.data.Datasets
 import scalanlp.optimize.{RandomizedGradientCheckingFunction, CachedBatchDiffFunction, BatchDiffFunction, DiffFunction}
 import scalanlp.util.logging.ConfiguredLogging
+import scalanlp.stats.ContingencyStats
+import scalala.library.Library
+import scalanlp.collection.mutable.Beam
 
 /**
  * 
@@ -38,17 +41,21 @@ object HW2 extends App {
 
   val featureSize = fixed.iterator.flatMap(_.tokens).max + 1
   val norm = if(params.l2Obj) 2.0 else 1.0
-  val cv = Datasets.crossValidate(10,fixed){ (train,test) =>
+  val cv = Datasets.crossValidate(10,fixed){ def dotProduct(toks: scala.IndexedSeq[Int], weights: Array[Double]): Double = {
+    var score = 0.0
+    var i = 0
+    while (i < toks.length) {
+      score += weights(toks(i))
+      i += 1
+    }
+    score
+  }
+    (train,test) =>
     val obj = new BatchDiffFunction[DenseVector[Double]] {
       def fullRange = 0 until train.size
 
       def computeSignedError(toks: scala.IndexedSeq[Int], weights: Array[Double], target: Double): Double = {
-        var score = 0.0
-        var i = 0
-        while(i < toks.length) {
-          score += weights(toks(i))
-          i += 1
-        }
+        var score: Double = dotProduct(toks, weights)
         val contribution = score - target
         contribution
       }
@@ -95,8 +102,10 @@ object HW2 extends App {
     val numPerIteration = if(params.opt.useStochastic) params.opt.batchSize else train.size
     var n = 0
     val testSetEval = new ArrayBuffer[Double]
+    var testSetClassificationStats: ContingencyStats[Boolean] = null
     val maxPasses = if(params.opt.maxIterations < 0) 25 else params.opt.maxIterations
     val maxIterations = if(params.opt.useStochastic) maxPasses * (train.size + params.opt.batchSize) / params.opt.batchSize else maxPasses
+    var theta: DenseVector[Double] = null
     for( state <- params.opt.iterations(cached, DenseVector.zeros[Double](featureSize)).takeWhile(_.grad.norm(2) > 1E-7).take(maxIterations)) {
       n += 1
       runningAverage = (runningAverage * 9 + state.value)/10
@@ -105,22 +114,44 @@ object HW2 extends App {
       if(placeInTrainingSet >= train.size) {
         val pass = numEvaluated / train.size
         testSetEval += math.sqrt(obj.testLoss(state.x))
+
         println("Test Loss!" + testSetEval.last)
         placeInTrainingSet -= train.size
       }
+      theta = state.x
       println(state.value +" " + runningAverage)
     }
+    testSetClassificationStats = ContingencyStats(test.map(_.rating > 3),test.map(ex => dotProduct(ex.tokens,theta.data) > 3))
     println("Finished: " + testSetEval)
-    testSetEval
+    (testSetEval,theta,testSetClassificationStats)
   }
   if(params.output != null) {
-    for( (run,i) <- cv.zipWithIndex) {
+    for( (run: (ArrayBuffer[Double], DenseVector[Double], ContingencyStats[Boolean]),i) <- cv.zipWithIndex) {
       val strm = new PrintStream(new FileOutputStream(new File(params.output + "-run-"+i+".txt")))
-      for(x <- run) strm.println(x)
+      for(x <- run._1) strm.println(x)
       strm.close()
+      val strm2 = new PrintStream(new FileOutputStream(new File(params.output + "-eval-"+i+".txt")))
+      val x = run._3
+      strm2.println(x.macroaveraged.precision + "\t" + x.macroaveraged.recall + "\t" + x.macroaveraged.f
+        + "\t" + x.microaveraged.precision + "\t" + x.microaveraged.recall + "\t" + x.microaveraged.f
+      )
+
+      strm2.close()
     }
   }
-  println("All done!" + cv.map(_.last).sum/cv.length)
+  println("All done!" + cv.map(_._1.last).sum/cv.length)
+  println("All done!" + cv.map(_._3.macroaveraged.f).sum/cv.length)
+  val sum = cv.map(_._2).reduceLeft(_ += _)
+  val beam = new Beam[(Int, Double)](20)(Ordering[Double].on(_._2.abs))
+  println("Top Weights:")
+  beam foreach { case (i,v) =>
+    println(index.get(i) + " " + v)
+  }
+
+  val sparsity = cv.last._2.valuesIterator.count(_ == 0.0)
+  val sparsityKinda = cv.last._2.valuesIterator.count(_.abs < 1E-6)
+  println("Sparsity: " + sparsity + " " + sparsityKinda)
+
 }
 
 class Filters(index: Index[String], counts: Array[Double]) {
