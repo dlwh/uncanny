@@ -12,15 +12,18 @@ import collection.immutable.BitSet
 import scalanlp.util.{Iterators, Index}
 import java.io._
 import scalala.tensor.dense.DenseVector
-import scalanlp.optimize.{CachedBatchDiffFunction, BatchDiffFunction, DiffFunction}
+import scalanlp.data.Datasets
+import scalanlp.optimize.{RandomizedGradientCheckingFunction, CachedBatchDiffFunction, BatchDiffFunction, DiffFunction}
+import scalanlp.util.logging.ConfiguredLogging
 
 /**
  * 
  * @author dlwh
  */
 object HW2 extends App {
-  case class Params(opt: OptParams, tokens: File, dict: File, l2Obj: Boolean = true)
+  case class Params(opt: OptParams, tokens: File, dict: File, l2Obj: Boolean = true, output: File = null)
   val config = CommandLineParser.parseArguments(args)._1
+  ConfiguredLogging.configuration = config
   val params = config.readIn[Params]("")
   println(params)
   println("Reading index...")
@@ -30,48 +33,94 @@ object HW2 extends App {
   import f._
   println("Processing reviews")
   val reviews = new Reviews(params.tokens,index)
-  val fixed = reviews.iterator.map(removeRating andThen topNNonStopWords(10000)).toIndexedSeq
+  val fixed = reviews.iterator.map(removeRating andThen topNNonStopWords(40000)).toIndexedSeq
   println("Optimizing...")
 
   val featureSize = fixed.iterator.flatMap(_.tokens).max + 1
-  val obj = new BatchDiffFunction[DenseVector[Double]] {
-    def fullRange = 0 until fixed.size
+  val norm = if(params.l2Obj) 2.0 else 1.0
+  val cv = Datasets.crossValidate(10,fixed){ (train,test) =>
+    val obj = new BatchDiffFunction[DenseVector[Double]] {
+      def fullRange = 0 until train.size
 
-    def computeScoreAndCounts(toks: IndexedSeq[Int], weights: DenseVector[Double], target: Double, counts: DenseVector[Double]) = {
-      var score = 0.0
-      for(t <- toks) {
-        score += weights(t)
+      def computeSignedError(toks: scala.IndexedSeq[Int], weights: Array[Double], target: Double): Double = {
+        var score = 0.0
+        var i = 0
+        while(i < toks.length) {
+          score += weights(toks(i))
+          i += 1
+        }
+        val contribution = score - target
+        contribution
       }
-      val contribution = score - target
-      val loss = math.pow(contribution,2) * .5
-      for(t <- toks) {
-        counts(t) += contribution
+
+      def computeScoreAndCounts(toks: IndexedSeq[Int], weights: Array[Double], target: Double, counts: DenseVector[Double]) = {
+        val contribution: Double = computeSignedError(toks, weights, target)
+        val loss = math.pow(math.abs(contribution),norm)/norm
+        if(norm == 2.0) {
+          var i = 0
+          for(t <- toks) {
+            counts(t) += contribution
+          }
+        } else {
+          var i = 0
+          while(i < toks.length) {
+            counts(toks(i)) += math.signum(contribution)
+            i += 1
+          }
+        }
+        loss
       }
-      loss
+
+      def testLoss(x: DenseVector[Double]) = {
+        val w = x.data
+        test.par.map(ex => math.pow(computeSignedError(ex.tokens,w,ex.rating),2)).reduceLeft(_ + _) / test.size
+      }
+
+      def calculate(x: DenseVector[Double], batch: IndexedSeq[Int]) = {
+        val (loss,gradient) = batch.map(train).par.aggregate( (0.0,null:DenseVector[Double]))({ (stats,r) =>
+          val (loss,dvx) = stats
+          val counts = if(dvx eq null) DenseVector.zeros[Double](featureSize) else dvx
+          val myLoss = computeScoreAndCounts(r.tokens,x.data,r.rating,counts)
+          (loss + myLoss) -> counts
+        }, { (a,b) => if(a._2 eq null) b else (a._1 + b._1, a._2 += b._2)})
+        (loss/batch.size,gradient/=batch.size)
+      }
+
     }
 
-    def calculate(x: DenseVector[Double], batch: IndexedSeq[Int]) = {
-      batch.map(fixed).par.aggregate( (0.0,null:DenseVector[Double]))({ (stats,r) =>
-        val (loss,dvx) = stats
-        val counts = if(dvx eq null) DenseVector.zeros[Double](featureSize) else dvx
-        val myLoss = computeScoreAndCounts(r.tokens,x,r.rating,counts)
-        (myLoss -> counts)
-      }, { (a,b) => if(a._2 eq null) b else (a._1 + b._1, a._2 += b._2)})
+    val cached = new CachedBatchDiffFunction(obj)
+    var numEvaluated = 0
+    var placeInTrainingSet = 0
+    var runningAverage = 0.0
+    val numPerIteration = if(params.opt.useStochastic) params.opt.batchSize else train.size
+    var n = 0
+    val testSetEval = new ArrayBuffer[Double]
+    val maxPasses = if(params.opt.maxIterations < 0) 25 else params.opt.maxIterations
+    val maxIterations = if(params.opt.useStochastic) maxPasses * (train.size + params.opt.batchSize) / params.opt.batchSize else maxPasses
+    for( state <- params.opt.iterations(cached, DenseVector.zeros[Double](featureSize)).takeWhile(_.grad.norm(2) > 1E-7).take(maxIterations)) {
+      n += 1
+      runningAverage = (runningAverage * 9 + state.value)/10
+      numEvaluated += numPerIteration
+      placeInTrainingSet += numPerIteration
+      if(placeInTrainingSet >= train.size) {
+        val pass = numEvaluated / train.size
+        testSetEval += math.sqrt(obj.testLoss(state.x))
+        println("Test Loss!" + testSetEval.last)
+        placeInTrainingSet -= train.size
+      }
+      println(state.value +" " + runningAverage)
     }
-
+    println("Finished: " + testSetEval)
+    testSetEval
   }
-
-  val cached = new CachedBatchDiffFunction(obj)
-  var runningAverage = 0.0
-  var adjRunningAverage = 0.0
-  var n = 0
-  val avg = if(params.opt.useStochastic) params.opt.batchSize else 1
-  for( state <- params.opt.iterations(cached, DenseVector.zeros[Double](featureSize)).take(params.opt.maxIterations)) {
-    n += 1
-    runningAverage += (state.value - runningAverage)/n
-    adjRunningAverage += (state.adjustedValue - adjRunningAverage)/n
-    println(state.value +" " + runningAverage/avg +" " + adjRunningAverage/avg)
+  if(params.output != null) {
+    for( (run,i) <- cv.zipWithIndex) {
+      val strm = new PrintStream(new FileOutputStream(new File(params.output + "-run-"+i+".txt")))
+      for(x <- run) strm.println(x)
+      strm.close()
+    }
   }
+  println("All done!" + cv.map(_.last).sum/cv.length)
 }
 
 class Filters(index: Index[String], counts: Array[Double]) {

@@ -1,0 +1,505 @@
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.1
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.1
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:1.1414247650345322 1.2176459506273642
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:1.1425501229891835 1.2177176721183167
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.5
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.5
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:1.0897088604221807 1.194979692043689
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:1.0908224191474778 1.197356062717769
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:1.0031092586950876 1.2532061364681824
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:1.004036327280502 1.255188880010691
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.2
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.2
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.8783099965042429 1.1525524511301326
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.8790809210065897 1.152623385313304
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.744591451115609 0.7718922854181508
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.7460238858395092 0.7720086703239598
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.2
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.2
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.7180727937919276 0.7280118754452048
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.7196937456865404 0.7283758807853379
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.7038774362313311 1.8525776931136333
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.7057897086334778 1.852920578007025
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.2
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.2
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6914471840795396 0.3908741859461611
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6934094848931909 0.39108786848573274
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6823238887996325 0.8144356808806366
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6842173623302528 0.8137148438804139
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6782997753051418 0.20357010111661103
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6801829031549587 0.2029758510741768
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6776577953334596 0.2076422897059112
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6795387645027651 0.20806749117074197
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6772698785385463 0.23308816055027756
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6791464694947779 0.2335444910965527
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6739519928762285 0.30331751568841936
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6757917840969899 0.30354550386333
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6696761102541073 0.6038598912317088
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6715098505694937 0.6041971968022328
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6666378572513377 0.37180001004263297
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6684820878421861 0.3718673314721634
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6656956759024303 0.4967768403099742
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6675751065401506 0.4959172075534703
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6648432448361121 0.18700046070549745
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6667321429031752 0.18578935129494695
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6643470993698191 0.10921392908385019
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6662478846940402 0.10776317156442348
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6636693921346545 0.5454942874758197
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.665625325603685 0.5456240937701475
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6627780966109723 0.25587352416625225
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6647574608092499 0.2557312827911741
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6616082216563298 0.0927862075368659
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6636616571406441 0.09164048223536347
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6612074363859791 0.10764658274649451
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6633045484741394 0.10663460104762941
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6600607614570948 0.19590264275340177
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.662203853088196 0.19496253162345945
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6582378668694593 0.3493128493693395
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6605274087589293 0.3483271908292378
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6565624295762755 0.2170451628762916
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6590479582024995 0.21686340057831455
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.2
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.2
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6562308565658812 0.10866736911660939
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.658735144889579 0.10746501950085183
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6557954278626054 0.5013166430790896
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.658424136966131 0.5002687260669476
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6547850128988246 0.11329399747256727
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6575012611247828 0.11208971108513925
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6543411791380944 0.1348752229452951
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6571095367328872 0.13411629144648252
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6530841697735696 0.13777566546956785
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6559935470363708 0.13698919651676428
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6513890456998763 0.7962402050533706
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6546833740036573 0.7965060994255727
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6489644199984674 0.17220088459197724
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6523669430032929 0.1720492371142914
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.648286872283941 0.12640361713578888
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6517677251292003 0.12544562615453458
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.647715222679049 0.23233278929879703
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6513034839246369 0.23154033274564173
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6467154051352254 0.22507643475889436
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6504523808097958 0.22424122643544614
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.2
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.2
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.645069850779817 0.1825166092360547
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6492752987233235 0.1819029052254964
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6418191475970211 0.20459747016594634
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6471291890851263 0.20383575485273941
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6409384104063822 0.8159626599013531
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6462185537524986 0.8163729069901983
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6388379135604519 0.1695213239568015
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6441032375313778 0.16987508871943494
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6384301278297024 0.08230029754113621
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6436942114933744 0.08241534893086522
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6379918745778296 0.08550500437561805
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6433518446145923 0.08515985940085374
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6372604603646826 0.12742009826679426
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6427323208476841 0.12684426645550756
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6347125442706961 0.2383997273023151
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6406385312128601 0.23758388179332562
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6326024949322586 0.16036446117290926
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6389447196179521 0.15945846699167032
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6311149188991638 0.26830264486815236
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6377635984549226 0.268734752963162
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6306273438495644 0.39042899544094345
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6374146342991948 0.39072740910949466
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6296302757350407 0.20550130176803563
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6366708084562384 0.20502075885515936
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.628999114651025 0.10889437226633365
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6358892707667332 0.10847450247887241
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6281033725802917 0.08090285904021144
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6348596542523721 0.08108855756492372
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6274370340272921 0.09446491161219724
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6343213471712803 0.09477776826732648
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6252561857497604 0.0882016254512317
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6321718713282134 0.08775887134023586
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6233528147043502 0.312666169402732
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6312437629751491 0.3129299658392398
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6229835453990836 0.2792523222149998
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6307201609548082 0.27881363299038786
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6227335139430483 0.1260046882398378
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6303705004772029 0.12553251809525856
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6226528893840696 0.07802918207723823
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6302033151227966 0.07756924790927974
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6224463148839451 0.09041611265218606
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.629923724224041 0.09024784191501892
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6217696708003692 0.12505187767279327
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6291944742375839 0.12411874500405796
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6209774658800026 0.13386140696686033
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6284263226226138 0.13281965019668665
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.2
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.2
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.620074440383099 0.2895038827803493
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6278358801257424 0.28982886279781395
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6190925627899194 0.102151742889671
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6270229354203314 0.10195512930242616
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6185976242930401 0.11837138245706921
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6266804165893023 0.1178080612125051
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6177358995819341 0.17756918149588843
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6260906277839917 0.17697379027962107
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6165855065874594 0.08177840114530188
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.625168084264614 0.08134335708901347
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6156789748288704 0.09318390784444575
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6244793443910355 0.09344124742449593
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6150226407465545 0.0819047535903677
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6239130424303567 0.08183144942922703
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6144539177534731 0.18970819012534945
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6235221804378939 0.19018874185945797
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6139810871760194 0.13982728175422982
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6230879174727303 0.14035411937099437
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6128066009016595 0.23570117701567606
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6221657837342692 0.23526575709119993
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6120249216155358 0.15693447779055372
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6216137777433198 0.15664153384152782
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6111482039203747 0.1138331845453517
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6208934574855545 0.11356645557663997
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6092452478669942 0.07668140763272432
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6193813465492394 0.07667931261771752
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6081509968778955 0.06791599655207461
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6186308955036025 0.06756493372405321
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6075807565094679 0.39900636259642397
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6183476459438355 0.3994056428381682
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6068035106002745 0.15078241912725746
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6176003211752509 0.15129370324710067
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6061911770354261 0.055651109494108654
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6171201567765706 0.055833871423791454
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6058477304949752 0.08707828444163693
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.616916499449012 0.0871585545319168
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6052290210593139 0.11021714255064746
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6164822345900429 0.11020878271152076
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6038863231147382 0.06478691012993044
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6158856427648401 0.0655158928742679
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6035247402573602 0.04345899118266684
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6153907245583292 0.04418441861278406
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.2
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.2
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.603404384246661 0.06337717166032368
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6152719335379583 0.06331216685172297
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6030466516552292 0.10520788285671069
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6148752777069075 0.10477016686299773
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6024757496109059 0.09813868342174542
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6143353786185616 0.09847958456432833
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6017188062331961 0.05868515512518723
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6137120290307556 0.05824210019989386
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.6008274050823268 0.0631778385892827
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6130519562125699 0.06309840696178232
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5999050660059714 0.11945467014506231
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.612333204914004 0.11900935345765733
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5993479815276891 0.05594812990329585
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6118961060739844 0.05665691733846139
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5992224355636333 0.05270395150709432
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6117655047818477 0.05349221619503685
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.2
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.2
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5990898877523395 0.1758816934079676
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6116160155135787 0.17642476118536446
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5986967513165347 0.12037150154927573
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6112218285665585 0.12108856115331598
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5981756583526727 0.05877749973252024
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6107201712278075 0.05937462928652857
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5977511221797275 0.04751426148539412
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6103335296124147 0.047730247065283546
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5972560310269497 0.04897750550055482
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6098779591512448 0.04941155407155148
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5971892943207279 0.28079153000016427
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6098698863793578 0.28021176545572907
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.596804760936703 0.31266481394726503
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6094788129348371 0.31313802301156096
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5963527131138541 0.05543463856486372
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6090016220643559 0.05622111237550142
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5962624442706005 0.04899221265533989
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6089081197786429 0.04954531508437594
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5960933088593379 0.05410576787295783
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6087342497865142 0.054389793260096395
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 0.2
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:0.2
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5959105804338709 0.043915983475402265
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6085391750862698 0.044447247040887754
+(INFO) (OWLQN.scala:57) .
+(INFO) (OWLQN.scala:62) Step size: 1.0
+(INFO) (FirstOrderMinimizer.scala:43) Step Size:1.0
+(INFO) (FirstOrderMinimizer.scala:46) Val and Grad Norm:0.5953679587719112 0.06319342049184891
+(INFO) (FirstOrderMinimizer.scala:48) Adj Val and Grad Norm:0.6079604000137989 0.06293316929521789
