@@ -18,6 +18,7 @@ import scalanlp.util.logging.ConfiguredLogging
 import scalanlp.stats.ContingencyStats
 import scalala.library.Library
 import scalanlp.collection.mutable.Beam
+import scala.collection.mutable.PriorityQueue
 
 /**
  * 
@@ -142,9 +143,11 @@ object HW2 extends App {
   println("All done!" + cv.map(_._1.last).sum/cv.length)
   println("All done!" + cv.map(_._3.macroaveraged.f).sum/cv.length)
   val sum = cv.map(_._2).reduceLeft(_ += _)
-  val beam = new Beam[(Int, Double)](20)(Ordering[Double].on(_._2.abs))
+  val beam = new PriorityQueue[(Int, Double)]()(Ordering[Double].on(_._2.abs))
   println("Top Weights:")
-  beam foreach { case (i,v) =>
+  beam ++= cv.last._2.pairsIterator
+  for(i <- 0 until 20) {
+    val (i,v) = beam.dequeue()
     println(index.get(i) + " " + v)
   }
 
