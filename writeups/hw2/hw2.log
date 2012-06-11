@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010/MacPorts 2010_4) (format=pdflatex 2011.4.14)  24 FEB 2012 15:39
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010/MacPorts 2010_4) (format=pdflatex 2011.4.14)  24 FEB 2012 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -539,91 +539,41 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 Package xypdf Info: Line width: 0.43799pt on input line 50.
 \c@lstlisting=\count133
-
-
-Package natbib Warning: Citation `Blitzer07Biographies' on page 1 undefined on 
-input line 57.
-
-
-Package natbib Warning: Citation `lbfgs' on page 1 undefined on input line 76.
-
-
-Package natbib Warning: Citation `Andrew07scalabletraining' on page 1 undefined
- on input line 77.
-
-
-Package natbib Warning: Citation `duchi10adaptive' on page 1 undefined on input
- line 79.
-
-
-Package natbib Warning: Citation `duchi10adaptive' on page 1 undefined on input
- line 88.
-
-[1
+ [1
 
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package natbib Warning: Citation `prokopec2011Generic' on page 2 undefined on i
-nput line 103.
-
-<lbfgs-rmse.png, id=44, 449.5194pt x 319.9152pt>
+<lbfgs-rmse.png, id=75, 449.5194pt x 319.9152pt>
 File: lbfgs-rmse.png Graphic file (type png)
  <use lbfgs-rmse.png>
-<stochastic-rmse.png, id=46, 447.1104pt x 323.7696pt>
+<stochastic-rmse.png, id=77, 447.1104pt x 323.7696pt>
 File: stochastic-rmse.png Graphic file (type png)
 
 <use stochastic-rmse.png> [2 <./lbfgs-rmse.png> <./stochastic-rmse.png>]
+Underfull \vbox (badness 5817) has occurred while \output is active []
 
-LaTeX Warning: Reference `tbl:classification' on page 3 undefined on input line
- 177.
-
-
-LaTeX Warning: Reference `tbl:weights' on page 3 undefined on input line 226.
-
+ [3]
 (./hw2.bbl
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
- [3])
-
-Package natbib Warning: There were undefined citations.
-
+ [4])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
-[4]
+ [5]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
- (./hw2.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+ (./hw2.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
-
-
-Package rerunfilecheck Warning: File `hw2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `hw2.out':
-(rerunfilecheck)             Before: DF395A7206946287F02A1FD520E97CCB;269
-(rerunfilecheck)             After:  B434ADE5DBD143E35C2108C1AF552EAC;512.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `hw2.out' has not changed.
+(rerunfilecheck)             Checksum: B434ADE5DBD143E35C2108C1AF552EAC;512.
  ) 
 Here is how much of TeX's memory you used:
- 10818 strings out of 494770
- 148755 string characters out of 3171403
- 273519 words of memory out of 3000000
- 13788 multiletter control sequences out of 15000+200000
+ 10823 strings out of 494770
+ 148820 string characters out of 3171403
+ 274005 words of memory out of 3000000
+ 13792 multiletter control sequences out of 15000+200000
  16475 words of font info for 67 fonts, out of 3000000 for 9000
  134 hyphenation exceptions out of 8191
- 33i,17n,40p,3231b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
-</opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmbx10.pf
-b></opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
+ 33i,17n,40p,3231b,428s stack positions out of 5000i,500n,10000p,200000b,50000s
+</opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
 b></opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
 b></opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
 b></opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
@@ -639,10 +589,10 @@ al/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/loc
 al/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></opt/loc
 al/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/loc
 al/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on hw2.pdf (4 pages, 277971 bytes).
+Output written on hw2.pdf (5 pages, 270537 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
