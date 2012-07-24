@@ -43,3 +43,5 @@ javaOptions += "-Xmx2g"
 
 
 seq(assemblySettings: _*)
+
+seq(sbtjflex.SbtJFlexPlugin.jflexSettings: _*)
