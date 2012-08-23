@@ -2,15 +2,18 @@ package dlwh.uncanny.lj
 
 import xml.XML
 import org.jsoup._
-import breeze.text.tokenize.{PTBTokenizer, SentenceTokenizer}
 import dlwh.uncanny.StandardTokenizer
+import breeze.text.segment.{JavaSentenceSegmenter, SentenceSegmenter}
+import org.apache.lucene.analysis.{TokenStream, Tokenizer, Analyzer}
+import java.io.Reader
+import org.apache.lucene.analysis.Analyzer.TokenStreamComponents
 
 /**
  *
  * @author dlwh
  */
 
-object Tokenize extends App {
+object Tokenize {
 
   // replaces misspellings or probable misspellings
   // with their correct words
@@ -22,6 +25,9 @@ object Tokenize extends App {
       replaceAll("\\bIsnt\\b","Isn't").
       replaceAll("\\bdont\\b","don't").
       replaceAll("\\bDont\\b","Don't").
+      replaceAll("\\bHavent\\b","Haven't").
+      replaceAll("\\bhavent\\b","haven't").
+      replaceAll("\\bhasnt\\b","hasn't").
       replaceAll("\\.I ",". I ").
       replaceAll("\\bi "," I ").
       replaceAll("\\bi'"," I'").
@@ -37,21 +43,18 @@ object Tokenize extends App {
     replaceAll("\ball?ot\b", " a lot ")
       replaceAll("\bAll?ot\b", " A lot ")
   )
-  for(f <- args) {
-    val xml = XML.loadFile(f)
-    val lines = io.Source.stdin.getLines()
-    for(x <- xml \\ "event" \ "string") {
-      var xx = Jsoup.parseBodyFragment(x.text).body.text()
-      println(xx)
-      xx = antiidiotify(xx)
-      println("Tokenized:")
-      for(sent <- new SentenceTokenizer apply xx) {
-        println(StandardTokenizer().apply(sent))
-      }
-      println("\n\n")
-      if(lines.next().contains("q")) sys.exit(0)
-    }
 
+
+  val sentTokenizer = new JavaSentenceSegmenter
+  val tok = StandardTokenizer
+  def tokenize(text: String): Iterable[Iterable[String]] = {
+    var xx = Jsoup.parseBodyFragment(text).body.text()
+    xx = antiidiotify(xx)
+    val words = for(sent <- sentTokenizer(xx)) yield
+      for( w <- tok(sent) ) yield w
+
+    words
   }
 
 }
+

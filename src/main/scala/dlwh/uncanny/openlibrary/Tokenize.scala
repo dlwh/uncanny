@@ -2,6 +2,7 @@ package dlwh.uncanny.openlibrary
 
 import io.Source
 import breeze.text.tokenize._
+import breeze.text.segment.JavaSentenceSegmenter
 
 /**
  *
@@ -20,7 +21,8 @@ object Tokenize extends App {
     str = "(?m)- \n\n*".r.replaceAllIn(str, "")
     str = "(?m) \n(.)".r.replaceAllIn(str, " $1")
 
-    val sents = (new SentenceTokenizer apply str).toIndexedSeq
+
+    val sents = (new JavaSentenceSegmenter apply str).toIndexedSeq
     val toks = for(sent <- sents) yield PTBTokenizer().apply(sent)
     println("out: " + (System.currentTimeMillis() - in))
 
