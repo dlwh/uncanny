@@ -23,7 +23,7 @@ object Tokenize extends App {
 
 
     val sents = (new JavaSentenceSegmenter apply str).toIndexedSeq
-    val toks = for(sent <- sents) yield PTBTokenizer().apply(sent)
+    val toks = for(sent <- sents) yield PTBTokenizer(sent)
     println("out: " + (System.currentTimeMillis() - in))
 
     str2 = str

@@ -15,11 +15,12 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "junit" % "junit" % "4.5" % "test",
   "org.jsoup" % "jsoup" % "1.6.3",
-  "org.scalanlp" %% "breeze-process" % "0.1-SNAPSHOT",
-  "org.scalanlp" %% "breeze-learn" % "0.1-SNAPSHOT",
-  "org.scalanlp" %% "breeze-math" % "0.1-SNAPSHOT",
+  "org.scalanlp" %% "breeze-process" % "0.2-SNAPSHOT",
+  "org.scalanlp" %% "breeze-learn" % "0.2-SNAPSHOT",
+  "org.scalanlp" %% "breeze-math" % "0.2-SNAPSHOT",
   "org.apache.lucene" % "lucene-core" % "4.0.0-BETA",
-  "org.apache.lucene" % "lucene-analyzers-common" % "4.0.0-BETA"
+  "org.apache.lucene" % "lucene-analyzers-common" % "4.0.0-BETA",
+  "org.apache.lucene" % "lucene-queryparser" % "4.0.0-BETA"
 )
 
 libraryDependencies <<= (scalaVersion, libraryDependencies) { (sv, deps) =>
