@@ -68,7 +68,7 @@ object IndexCorpus extends App {
           val path = f.getPath
           pathF.setStringValue(path)
 
-          val mood = (post \ "current_moodid").text
+          val mood = (post \\ "current_moodid").text
           if(mood != "") {
             moodF.setIntValue(mood.toInt)
           } else {

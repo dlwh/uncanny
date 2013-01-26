@@ -5,7 +5,7 @@ version := "1.0"
 
 organization := "dlwh"
 
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.0"
 
 resolvers ++= Seq(
   "ScalaNLP Maven2" at "http://repo.scalanlp.org/repo",
@@ -18,20 +18,23 @@ libraryDependencies ++= Seq(
   "org.scalanlp" %% "breeze-process" % "0.2-SNAPSHOT",
   "org.scalanlp" %% "breeze-learn" % "0.2-SNAPSHOT",
   "org.scalanlp" %% "breeze-math" % "0.2-SNAPSHOT",
+  "org.scalanlp" %% "breeze-core" % "0.2-SNAPSHOT",
   "org.apache.lucene" % "lucene-core" % "4.0.0-BETA",
   "org.apache.lucene" % "lucene-analyzers-common" % "4.0.0-BETA",
   "org.apache.lucene" % "lucene-queryparser" % "4.0.0-BETA"
 )
 
+
 libraryDependencies <<= (scalaVersion, libraryDependencies) { (sv, deps) =>
   sv match {
     case "2.9.2" =>
-      (deps :+ ("org.scalatest" % "scalatest" % "1.4.RC2" % "test")
-            :+ ("org.scala-tools.testing" % "scalacheck_2.9.1" % "1.9" % "test"))
+      (deps :+ ("org.scalatest" % "scalatest" % "1.4.RC2" % "test"))
     case x if x.startsWith("2.8") =>
       (deps :+ ("org.scalatest" % "scalatest" % "1.3" % "test")
             :+ ("org.scala-tools.testing" % "scalacheck_2.8.1" % "1.8" % "test"))
-    case x  => error("Unsupported Scala version " + x)
+    case _       =>
+     (deps :+ ("org.scalacheck" %% "scalacheck" % "1.10.0" % "test")
+           :+ ("org.scalatest" %% "scalatest" % "2.0.M5b" % "test"))
   }
 }
 

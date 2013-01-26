@@ -11,6 +11,7 @@ import org.apache.lucene.queryparser.classic.QueryParser
 import org.apache.lucene.search.{Query, ScoreDoc, IndexSearcher}
 import util.matching.Regex
 import io.Source
+import java.util
 
 /**
  *
@@ -29,61 +30,39 @@ case class EventFeature(kind: String) extends Feature
 case class ModdedEventFeature(kind: String, mod: String, bin: Int) extends Feature
 
 
-trait EventTemplate {
-  // examine all files that match query (coarse pass)
-  def query: String
-  // fine pass with an actual regex
-  def regex: Regex
-  def eventType: String
-}
+/**
+ *
+ * @param eventType the name
+ * @param query lucene query to run
+ * @param regex regex to find matches.
+ */
+case class EventTemplate(eventType: String, query: String, regex: Regex)
 
-trait ModTemplate {
-  def regex: Regex
-  def modName: String
-  def binDistance(doc: String, event: Range, positions: IndexedSeq[Int]):Int
+case class ModTemplate(modName: String, regex: Regex, distanceBins: Array[Int] = Array(2,4,8), strictlyBefore: Boolean = true) {
+  def binDistance(event: Range, modPositions: IndexedSeq[Int]) = {
+    modPositions.map(distanceTo(_, event)).min
+  }
+
+  def distanceTo(pos: Int, event: Range) = {
+    if(strictlyBefore && pos > event.last) -1
+    else if (pos < event.head) flattenSign(util.Arrays.binarySearch(distanceBins, event.head - pos))
+    else if(pos > event.last) flattenSign(util.Arrays.binarySearch(distanceBins, pos - event.last))
+    else 0
+  }
+
+  private def flattenSign(x: Int) = if(x >= 0) x else ~x
+
 }
 
 object EventTemplates {
 
   val templates = Seq(GotSick,FailedTest,Graduated,BreakUp,Divorce)
 
-  object GotSick extends EventTemplate {
-    def query: String = "sick"
-    def regex: Regex = "(felt|got|feel) sick".r
-
-    def eventType = "GotSick"
-  }
-
-  object FailedTest extends EventTemplate {
-    def query: String = "failed"
-    def regex  = "failed (exam|test)".r
-
-    def eventType = "FailedTest"
-  }
-
-  object Graduated extends EventTemplate {
-    def query: String = "graduated"
-
-    // fine pass with an actual regex
-    def regex: Regex = "I .* graduate".r
-
-    def eventType = "Graduated"
-  }
-
-  object BreakUp extends EventTemplate {
-    def query: String = """ "my girlfriend broke" OR "my boyfriend broke """
-
-    // fine pass with an actual regex
-    def regex: Regex = "my (girlfriend|boyfriend) broke".r
-
-    def eventType = "Breakup"
-  }
-
-  object Divorce extends EventTemplate {
-    def query = "My parents divorced"
-    def regex:Regex = "my parents .* divorce".r
-    def eventType = "Divorce"
-  }
+  object GotSick extends EventTemplate("GotSick", "sick", "(felt|got|feel) sick".r)
+  object FailedTest extends EventTemplate("FailedTest", "failed", "failed (exam|test)".r)
+  object Graduated extends EventTemplate("Graduated", "graduated",  "graduated".r)
+  object BreakUp extends EventTemplate("BreakUp", """ "my girlfriend broke" OR "my boyfriend broke" OR "dumped"  """, "(girlfriend|boyfriend) broke | dumped".r)
+  object Divorce extends EventTemplate("Divorced", """divorced""", "(girlfriend|boyfriend) broke | dumped".r)
 }
 
 object ExtractPotentialMatches {

@@ -36,7 +36,7 @@ class PropensityWeightingTest extends FunSuite with Checkers {
     val treated = Array.fill(features.size)(math.random > 0.5)
     val propensity = PropensityWeighting.estimate(features,  treated, treated)
     println("perfectly predictive, 2" + propensity)
-    assert(propensity > 0.999, propensity)
+    assert(propensity > 0.99, propensity)
   }
 
 }
