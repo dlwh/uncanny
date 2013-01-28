@@ -17,13 +17,11 @@ import java.util
  *
  * @author dlwh
  */
-case class Event(url: URL, user: String, postId: Int, eventType: String, position: Int)
-
 case class EventMod(url: URL, kind: String)
 
 case class ProcessedDocument(events: Map[Range, String], mods: Map[String, IndexedSeq[Int]])
 
-case class FeaturizedDocument(features: IndexedSeq[Feature])
+case class FeaturizedDocument(mood: Int, features: Array[Int])
 
 trait Feature
 case class EventFeature(kind: String) extends Feature
@@ -63,7 +61,42 @@ object EventTemplates {
   object Graduated extends EventTemplate("Graduated", "graduated",  "graduated".r)
   object BreakUp extends EventTemplate("BreakUp", """ "my girlfriend broke" OR "my boyfriend broke" OR "dumped"  """, "(girlfriend|boyfriend) broke | dumped".r)
   object Divorce extends EventTemplate("Divorced", """divorced""", "(girlfriend|boyfriend) broke | dumped".r)
+
 }
+
+object ModTemplates {
+  val templates = Seq(FirstPerson, ThirdPerson, Family, Should, Hope, Grateful)
+
+  object FirstPerson extends ModTemplate("FirstPerson", "(?i)\\bi|me|my\\e".r)
+  object ThirdPerson extends ModTemplate("ThirdPerson", "(?i)\\bhis|her|he|him\\e".r)
+  object Family extends ModTemplate("Family", "(?i)\\bdad|mom|father|mother|sister|brother|sis|daughter|son\\e".r)
+  object SOs extends ModTemplate("SignificantOthers", "(?i)\\bboyfriend|girlfriend|wife|husband|fiance".r)
+  object Should extends ModTemplate("Should", "(?i)should|must|ought".r, strictlyBefore=false)
+  object Hope extends ModTemplate("Hope", "(?i)hope|wish".r, strictlyBefore=false)
+  object Grateful extends ModTemplate("Grateful", "grateful|thankful".r, strictlyBefore=false)
+}
+
+object BuildFeatures {
+  def main(args: Array[String]) {
+    val reader = DirectoryReader.open(new NIOFSDirectory(new File(args(0))))
+    val featureIndex = breeze.util.Index[Feature]()
+    for(i <- 0 until reader.maxDoc()) {
+      val doc = reader.document(i)
+      val out = Array.newBuilder[Int]
+      val text = doc.get("ptext")
+      val events = for(e <- EventTemplates.templates; m <- e.regex.findAllIn(text).matchData) yield {
+        e.eventType -> (m.start, m.end)
+      }
+
+      val mods = for(f <- ModTemplates.templates; m <- f.regex.findAllIn(text).matchData) yield {
+        f.modName -> (m.start, m.end)
+      }
+
+    }
+  }
+}
+
+
 
 object ExtractPotentialMatches {
   def main(args: Array[String]) {

@@ -43,8 +43,8 @@ object IndexCorpus extends App {
   val timeF = new LongField("time", -1, Store.YES)
   document add timeF
 
-  val tokensF = new StringField("tokens","", Store.YES)
-  document add tokensF
+//  val tokensF = new StringField("tokens","", Store.YES)
+//  document add tokensF
 
   for(dir <- new File(args(1)).listFiles.iterator) {
     println(dir)
@@ -75,8 +75,8 @@ object IndexCorpus extends App {
             moodF.setIntValue(-1)
           }
 
-          val tokens = Tokenize.tokenize(text).map(_.mkString(" ")).mkString("\n")
-          tokensF.setStringValue(tokens)
+//          val tokens = Tokenize.tokenize(text).map(_.mkString(" ")).mkString("\n")
+//          tokensF.setStringValue(tokens)
 
 
           writer.addDocument(document)
